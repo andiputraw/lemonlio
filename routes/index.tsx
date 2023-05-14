@@ -1,6 +1,5 @@
 import { Head } from "$fresh/runtime.ts";
-import Counter from "../islands/Counter.tsx";
-import { Navbar } from "../components/navbar.tsx";
+import { Navbar } from "../components/IndexNavbar.tsx";
 import { HeroIndex } from "../components/HeroIndex.tsx";
 import { Footer } from "../components/Footer.tsx";
 export default function Home() {

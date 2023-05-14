@@ -1,5 +1,5 @@
 import { Head } from "$fresh/runtime.ts";
-import { Navbar } from "../components/Navbar.tsx";
+import { Navbar } from "../components/IndexNavbar.tsx";
 import { HeroAbout } from "../components/HeroAbout.tsx";
 import { Progress } from "../components/Progress.tsx";
 import { ProgrammingCard } from "../components/ProgrammingCard.tsx";
