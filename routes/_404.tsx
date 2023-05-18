@@ -1,4 +1,20 @@
-export function HeroIndex() {
+import { UnknownPageProps } from "$fresh/server.ts";
+import { Footer, Header, Navbar } from "../components/Default.tsx";
+
+export default function NotFoundPage(props: UnknownPageProps) {
+  return (
+    <>
+      <Header title="Lemonlio | Not Found" />
+      <div>
+        <Navbar />
+        <Hero />
+      </div>
+      <Footer />
+    </>
+  );
+}
+
+function Hero() {
   return (
     <div class="hero min-h-screen bg-base-200 w-screen ">
       <div class="hero-content flex-col lg:flex-row w-screen">
@@ -112,16 +128,17 @@ c29 0 31 -2 36 -52z m-786 -350 c7 -7 12 -32 12 -57 0 -26 12 -161 25 -301 38
         </div>
 
         <div>
-          <h1 class="text-5xl md:text-9xl font-bold m-5">Lemonlio</h1>
+          <h1 class="text-5xl md:text-9xl font-bold m-5">
+            404 : Not Found
+          </h1>
           <h2 class="text-2xl md:text-4xl m-5">
-            Build with Deno - Fresh - Tailwind - DaisyUI
+            The page you looking is not found.
           </h2>
-          <button class="btn bg-white text-black btn-outline m-2 md:m-5">
-            Blog
-          </button>
-          <button class="btn bg-white text-black btn-outline m-2 md:m-5">
-            More about me
-          </button>
+          <a href="./">
+            <button class="btn bg-white text-black btn-outline m-2 md:m-5">
+              Back to Home
+            </button>
+          </a>
         </div>
       </div>
     </div>
