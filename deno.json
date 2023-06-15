@@ -1,7 +1,8 @@
 {
   "tasks": {
-    "start": "deno run -A --watch=static/,routes/ dev.ts",
-    "tailwind": "tailwindcss -i input.css -o static/styles.css --watch"
+    "start": "deno run -A --watch=static/,routes/ dev.ts --allow-env",
+    "tailwind": "tailwindcss -i input.css -o static/styles.css --watch",
+    "tailwindmin": "tailwindcss -i input.css -o static/styles.css --minify"
   },
   "importMap": "./import_map.json",
   "compilerOptions": {

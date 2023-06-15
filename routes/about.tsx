@@ -33,20 +33,20 @@ function HeroAbout() {
           className="max-w-sm rounded-lg shadow-2xl"
         />
         <div class="">
-          <h1 className="text-5xl font-bold">Andi Putra Wijaya</h1>
-          <div class="py-6 text-2xl">
-            <h2 class="text-3xl font-sans font-semibold">
+          <h1 className="text-xl sm:text-5xl font-bold">Andi Putra Wijaya</h1>
+          <div class="py-6 text-base sm:text-2xl">
+            <h2 class="text-base sm:text-3xl font-sans font-semibold">
               SMKN 13 Bandung
             </h2>
-            <h2 class="text-3xl font-sans font-semibold">
+            <h2 class="text-base sm:text-3xl font-sans font-semibold">
               Hobbiyist Programmer | Backend Programmer
             </h2>
-            <h2 class="text-3xl font-sans font-semibold">
+            <h2 class="text-base sm:text-3xl font-sans font-semibold">
               Unemployeed
             </h2>
             <br />
-            <h2 class="text-2xl font-sans">Link</h2>
-            <ul class="menu bg-neutral-800 menu-vertical sm:menu-horizontal rounded-box">
+            <h2 class="text-base sm:text-2xl font-sans">Link</h2>
+            <ul class="menu bg-dark menu-vertical sm:menu-horizontal rounded-box">
               <li>
                 <a
                   class=" hover:bordererd text-white"
@@ -86,10 +86,13 @@ function Skill() {
         My Skill
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Progress logo={"nodejs.svg"} value={75} />
-        <Progress logo={"go.svg"} value={50} />
-        <Progress logo={"php.png"} value={60} />
-        <Progress logo={"rust.svg"} value={35} />
+        <Progress
+          logo={"nodejs.svg"}
+          highlight={["Express", "NestJS", "Typescript"]}
+        />
+        <Progress logo={"go.svg"} highlight={["Gorm", "Gin", "Fiber"]} />
+        <Progress logo={"php.png"} highlight={["Laravel"]} />
+        <Progress logo={"rust.svg"} highlight={["Rocket"]} />
       </div>
     </div>
   );

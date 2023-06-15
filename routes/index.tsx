@@ -15,7 +15,7 @@ export default function Home() {
 
 function HeroIndex() {
   return (
-    <div class="hero min-h-screen bg-base-200 w-screen ">
+    <div class="hero min-h-screen bg-black w-screen ">
       <div class="hero-content flex-col lg:flex-row w-screen">
         <div class="flex">
           <svg

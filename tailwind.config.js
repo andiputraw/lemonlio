@@ -6,7 +6,36 @@ module.exports = {
     "./components/**/*.{tsx,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "markdown-body": "#2a303c",
+      },
+    },
   },
-  plugins: [],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          "primary": "#111827",
+
+          "secondary": "#f3f4f6",
+
+          "accent": "#1FB2A5",
+
+          "neutral": "#191D24",
+
+          "base-100": "#2A303C",
+
+          "info": "#67e8f9",
+
+          "success": "#84cc16",
+
+          "warning": "#fef08a",
+
+          "error": "#be123c",
+        },
+      },
+    ],
+  },
+  plugins: [require("daisyui")],
 };

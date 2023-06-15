@@ -5,6 +5,11 @@
     "preact/": "https://esm.sh/preact@10.13.1/",
     "preact-render-to-string": "https://esm.sh/*preact-render-to-string@5.2.6",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.1.3",
-    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.2.3"
+    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.2.3",
+    "$supabase": "https://esm.sh/@supabase/supabase-js@2.22.0",
+    "$std/": "https://deno.land/std@0.177.1/",
+    "$logger": "https://deno.land/x/logger@v1.1.1/logger.ts",
+    "rustyMarkdown": "https://deno.land/x/rusty_markdown@v0.4.1/mod.ts",
+    "ammonia": "https://deno.land/x/ammonia@0.3.1/mod.ts"
   }
 }

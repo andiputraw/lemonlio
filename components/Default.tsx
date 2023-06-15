@@ -2,19 +2,16 @@ import { Head } from "$fresh/runtime.ts";
 
 interface HeaderProps {
   title: string;
+  css?: string;
 }
 
-export function Header({ title }: HeaderProps) {
+export function Header({ title, css }: HeaderProps) {
   return (
     <Head>
       <title>{title}</title>
 
-      <link
-        href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css"
-        rel="stylesheet"
-        type="text/css"
-      />
       <link rel="stylesheet" href="/styles.css" />
+      {css ? <link href={css} rel="stylesheet" type="text/css" /> : <></>}
     </Head>
   );
 }
@@ -34,24 +31,23 @@ export function Navbar() {
           <li>
             <a href={"/blog"}>Blog</a>
           </li>
-          <li tabIndex={0}>
-            <a>
-              More Stuff
-              <svg
-                className="fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-              >
-                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-              </svg>
-            </a>
-            <ul className="p-2 bg-slate-300 text-black">
-              <li>
-                <a>Soon</a>
-              </li>
-            </ul>
+          <li>
+            <a href={"/docs"}>Docs</a>
+          </li>
+          <li>
+            <a href={"/labs"}>Labs</a>
+          </li>
+          <li>
+            <details>
+              <summary>
+                More Stuff
+              </summary>
+              <ul className="p-2 bg-slate-300 text-white">
+                <li>
+                  <a href={"/blog/create"}>New Blog</a>
+                </li>
+              </ul>
+            </details>
           </li>
           <li>
             <a class="mr-4" href={"/about"}>About</a>
@@ -79,9 +75,20 @@ export function Footer() {
           </path>
         </svg>
         <p>
-          Lemonlio<br />Version 0.1 Beta
+          Lemonlio
         </p>
       </div>
+
+      <div>
+        <span className="footer-title">Credit</span>
+        <div className="grid grid-flow-col gap-4">
+          <p>
+            Icon by :{" "}
+            <a href="https://icons8.com/" class="hover:text-blue-600">icons8</a>
+          </p>
+        </div>
+      </div>
+
       <div>
         <span className="footer-title">Made With</span>
         <div className="grid grid-flow-col gap-4">
@@ -89,6 +96,7 @@ export function Footer() {
           <p>Fresh</p>
           <p>TailwindCSS</p>
           <p>DaisyUI</p>
+          <p>Supabase</p>
         </div>
       </div>
     </footer>
